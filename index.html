@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>hack.todo — Privacy Policy</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: #000;
+      color: #00cc33;
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 14px;
+      line-height: 1.75;
+      min-height: 100vh;
+      padding: 40px 20px 80px;
+    }
+
+    /* スキャンライン */
+    body::after {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background: repeating-linear-gradient(
+        to bottom,
+        transparent 0px,
+        transparent 2px,
+        rgba(0,0,0,0.08) 2px,
+        rgba(0,0,0,0.08) 4px
+      );
+      pointer-events: none;
+      z-index: 999;
+    }
+
+    .container {
+      max-width: 720px;
+      margin: 0 auto;
+    }
+
+    /* ヘッダー */
+    .header {
+      border: 1px solid #00cc33;
+      padding: 24px;
+      margin-bottom: 40px;
+      position: relative;
+    }
+    .header::before {
+      content: '▌▌  hack.todo  ▌▌';
+      display: block;
+      color: #00ff41;
+      font-size: 18px;
+      letter-spacing: 3px;
+      margin-bottom: 6px;
+    }
+    .header-sub {
+      color: #006619;
+      letter-spacing: 2px;
+      font-size: 11px;
+    }
+    .header-title {
+      margin-top: 20px;
+      font-size: 20px;
+      color: #00ff41;
+      letter-spacing: 1px;
+    }
+    .header-date {
+      margin-top: 6px;
+      color: #006619;
+      font-size: 12px;
+    }
+
+    /* カーソル */
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50%       { opacity: 0; }
+    }
+    .cursor {
+      display: inline-block;
+      width: 9px;
+      height: 16px;
+      background: #00ff41;
+      vertical-align: middle;
+      animation: blink 1.06s step-end infinite;
+      margin-left: 4px;
+    }
+
+    /* セクション */
+    section { margin-bottom: 36px; }
+
+    .section-header {
+      color: #00ff41;
+      font-size: 13px;
+      letter-spacing: 1px;
+      margin-bottom: 12px;
+      padding-bottom: 6px;
+      border-bottom: 1px solid #003311;
+    }
+    .section-header::before {
+      content: '> ';
+      color: #006619;
+    }
+
+    p { margin-bottom: 10px; color: #00aa2a; }
+
+    ul {
+      list-style: none;
+      margin: 8px 0 10px 0;
+    }
+    ul li {
+      color: #00aa2a;
+      padding-left: 0;
+      margin-bottom: 4px;
+    }
+    ul li::before {
+      content: '  — ';
+      color: #006619;
+    }
+
+    .highlight {
+      color: #00ff41;
+    }
+
+    /* フッター */
+    .footer {
+      margin-top: 60px;
+      border-top: 1px solid #003311;
+      padding-top: 20px;
+      color: #006619;
+      font-size: 12px;
+    }
+    .footer a {
+      color: #00cc33;
+      text-decoration: none;
+    }
+    .footer a:hover { color: #00ff41; }
+
+    .separator {
+      color: #003311;
+      margin: 8px 0;
+      overflow: hidden;
+      white-space: nowrap;
+    }
+
+    /* レスポンシブ */
+    @media (max-width: 480px) {
+      body { font-size: 13px; padding: 20px 14px 60px; }
+      .header { padding: 16px; }
+      .header-title { font-size: 17px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <header class="header">
+      <div class="header-sub">SECURE TASK MANAGEMENT SYSTEM</div>
+      <div class="header-title">PRIVACY POLICY<span class="cursor"></span></div>
+      <div class="header-date">Effective Date: 2026-05-17</div>
+    </header>
+
+    <div class="separator">────────────────────────────────────────────────────────</div>
+
+    <section>
+      <div class="section-header">Overview</div>
+      <p>hack.todo ("the App") is a terminal-style task management application developed by irodori (<span class="highlight">irodori.developer@gmail.com</span>).</p>
+      <p>This policy describes how the App handles your information. The short version: <span class="highlight">your data stays on your device. We collect nothing.</span></p>
+    </section>
+
+    <section>
+      <div class="section-header">Data We Collect</div>
+      <p>We do <span class="highlight">not</span> collect, transmit, or store any personal data on external servers. The App has no backend, no analytics, and no tracking of any kind.</p>
+    </section>
+
+    <section>
+      <div class="section-header">Data Stored Locally on Your Device</div>
+      <p>The following data is stored exclusively on your device and never leaves it:</p>
+      <ul>
+        <li>Task titles and completion status (via SwiftData)</li>
+        <li>App settings: selected theme, typing speed, username (via UserDefaults)</li>
+        <li>Onboarding completion flag (via UserDefaults)</li>
+        <li>Premium unlock status (verified via Apple's StoreKit)</li>
+      </ul>
+      <p>You can delete all locally stored data at any time by uninstalling the App.</p>
+    </section>
+
+    <section>
+      <div class="section-header">In-App Purchases</div>
+      <p>The App offers a one-time premium upgrade ("hack.todo Premium") processed entirely through Apple's App Store infrastructure (StoreKit 2).</p>
+      <ul>
+        <li>We never receive, store, or process your payment information</li>
+        <li>All purchase transactions are handled by Apple</li>
+        <li>Apple's privacy policy applies to payment processing</li>
+      </ul>
+      <p>For details on how Apple handles your data, see <span class="highlight">apple.com/legal/privacy</span>.</p>
+    </section>
+
+    <section>
+      <div class="section-header">Third-Party Services</div>
+      <p>The App does not integrate any third-party analytics, advertising, crash reporting, or social SDKs. No data is shared with third parties.</p>
+    </section>
+
+    <section>
+      <div class="section-header">Children's Privacy</div>
+      <p>The App does not knowingly collect any information from children under the age of 13. Since no data is collected at all, the App is safe for users of all ages.</p>
+    </section>
+
+    <section>
+      <div class="section-header">Data Security</div>
+      <p>All data is stored locally on your device and protected by iOS's built-in security mechanisms including device encryption and app sandboxing.</p>
+    </section>
+
+    <section>
+      <div class="section-header">Changes to This Policy</div>
+      <p>If this policy is updated, the new version will be published at this URL with a revised effective date. Continued use of the App after changes constitutes acceptance of the updated policy.</p>
+    </section>
+
+    <section>
+      <div class="section-header">Contact</div>
+      <p>Questions or concerns regarding this privacy policy:</p>
+      <ul>
+        <li>Developer: irodori</li>
+        <li>Email: <span class="highlight">irodori.developer@gmail.com</span></li>
+      </ul>
+    </section>
+
+    <div class="separator">────────────────────────────────────────────────────────</div>
+
+    <footer class="footer">
+      <p>© 2026 irodori. All rights reserved.</p>
+      <p style="margin-top:6px;">hack.todo v1.0 — Terminal task management for iOS</p>
+    </footer>
+
+  </div>
+</body>
+</html>
